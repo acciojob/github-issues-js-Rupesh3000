@@ -1,4 +1,3 @@
-//your code here
   const loadNextPage = document.getElementById("load_next");
   const loadPrevPage = document.getElementById("load_prev");
   const issuesIist = document.getElementById("issues_list");
@@ -17,7 +16,7 @@
     });
   };
   const getApiData = async (page) => {
-    pageNumber.innerText = currentPage;
+    pageNumber.innerText = `Page number ${page}`;
     try {
       const res = await fetch(
         `https://api.github.com/repositories/1296269/issues?page=${page}&per_page=5`
